@@ -23,7 +23,7 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-        stage('Deploy') {
+        stage('last') {
             steps {
                 sh '''
                     echo 'hello'
