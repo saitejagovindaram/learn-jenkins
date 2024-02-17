@@ -28,6 +28,7 @@ pipeline {
                 sh '''
                     echo 'hello'
                     env
+                    echo "$MyENV"
                 '''
             }
         }
