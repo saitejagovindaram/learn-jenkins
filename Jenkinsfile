@@ -4,6 +4,9 @@ pipeline {
             label 'agent-1'
         }
     }
+    environment { 
+        MyENV = 'Hello Jenkins'
+    }
     stages {
         stage('Build') {
             steps {
@@ -18,6 +21,14 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh '''
+                    echo 'hello'
+                    env
+                '''
             }
         }
     }
