@@ -7,6 +7,9 @@ pipeline {
     environment { 
         MyENV = 'Hello Jenkins'
     }
+    options {
+        timeout(time: 1, unit: 'SECONDS') 
+    }
     stages {
         stage('Build') {
             steps {
@@ -29,6 +32,7 @@ pipeline {
                     echo 'hello'
                     env
                     echo "$MyENV"
+                    sleep 10
                 '''
             }
         }
