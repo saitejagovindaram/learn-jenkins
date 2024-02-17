@@ -2,7 +2,6 @@ pipeline {
     agent {
         node {
         label 'agent-1'
-        customWorkspace '/home/centos/jenkins-data'
     }
     }
     stages {
