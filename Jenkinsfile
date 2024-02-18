@@ -44,7 +44,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 echo "Person name is: ${PERSON}"
-                echo "Person name is: ${Params.PERSON}"
+                echo "Person name is: ${params.PERSON}"
             }
         }
         stage('Test') {
