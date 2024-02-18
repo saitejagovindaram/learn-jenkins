@@ -43,7 +43,7 @@ pipeline {
             }
             steps {
                 echo 'Building..'
-                echo "Person name is: ${PERSON}"
+                echo "Person name is: ${params.PERSON}"
                 echo "Person name is: ${params.PERSON}"
             }
         }
@@ -69,7 +69,7 @@ pipeline {
         }
         stage('Example') {
             steps {
-                echo "Hello ${params.PERSON}"
+                echo "Hello ${PERSON}"
 
                 echo "Biography: ${params.BIOGRAPHY}"
 
