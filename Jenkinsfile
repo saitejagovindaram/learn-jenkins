@@ -30,7 +30,7 @@ pipeline {
                 ok "Yes, we should."
                 // submitter "alice,bob"
                 parameters {
-                    string(name: 'PERSON1', defaultValue: 'Mr Jenkins local', description: 'Who should I say hello to?')
+                    string(name: 'Person', defaultValue: 'Mr Jenkins local', description: 'Who should I say hello to?')
 
                     text(name: 'BIOGRAPHY1', defaultValue: '', description: 'Enter some information about the person')
 
@@ -43,7 +43,7 @@ pipeline {
             }
             steps {
                 echo 'Building..'
-                echo "Person name is: ${params.PERSON1}"
+                echo "Person name is: ${params.Person}"
             }
         }
         stage('Test') {
