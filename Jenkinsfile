@@ -30,15 +30,15 @@ pipeline {
                 ok "Yes, we should."
                 // submitter "alice,bob"
                 parameters {
-                    string(name: 'PERSON', defaultValue: 'Mr Jenkins local', description: 'Who should I say hello to?')
+                    string(name: 'PERSON1', defaultValue: 'Mr Jenkins local', description: 'Who should I say hello to?')
 
-                    text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
+                    text(name: 'BIOGRAPHY1', defaultValue: '', description: 'Enter some information about the person')
 
-                    booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
+                    booleanParam(name: 'TOGGLE1', defaultValue: true, description: 'Toggle this value')
 
-                    choice(name: 'CHOICE', choices: ['One-local', 'Two-local', 'Three-local'], description: 'Pick something')
+                    choice(name: 'CHOICE1', choices: ['One-local', 'Two-local', 'Three-local'], description: 'Pick something')
 
-                    password(name: 'PASSWORD', defaultValue: 'SECRET-local', description: 'Enter a password')
+                    password(name: 'PASSWORD1', defaultValue: 'SECRET-local', description: 'Enter a password')
                 }
             }
             steps {
@@ -68,15 +68,15 @@ pipeline {
         }
         stage('Example') {
             steps {
-                echo "Hello ${params.PERSON}"
+                echo "Hello ${params.PERSON1}"
 
-                echo "Biography: ${params.BIOGRAPHY}"
+                echo "Biography: ${params.BIOGRAPHY1}"
 
-                echo "Toggle: ${params.TOGGLE}"
+                echo "Toggle: ${params.TOGGLE1}"
 
-                echo "Choice: ${params.CHOICE}"
+                echo "Choice: ${params.CHOICE1}"
 
-                echo "Password: ${params.PASSWORD}"
+                echo "Password: ${params.PASSWORD1s}"
             }
         }
     }
