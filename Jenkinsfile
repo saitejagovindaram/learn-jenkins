@@ -5,7 +5,7 @@ pipeline {
         }
     }
     environment { 
-        MyENV = 'Hello Jenkins'
+        MyENV = 'Hello Jenkins '
     }
     options {
         timeout(time: 1, unit: 'HOURS') 
