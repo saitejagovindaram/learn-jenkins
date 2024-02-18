@@ -45,7 +45,7 @@ pipeline {
                     echo 'hello'
                     env
                     echo "$MyENV"
-                    //sleep 10
+                    #sleep 10
                 '''
             }
         }
