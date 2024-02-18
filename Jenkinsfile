@@ -25,8 +25,17 @@ pipeline {
     }
     stages {
         stage('Build') {
+            input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "alice,bob"
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Mr Jenkins local', description: 'Who should I say hello to?')
+                }
+            }
             steps {
                 echo 'Building..'
+                echo "Person name is: ${params.PERSON}"
             }
         }
         stage('Test') {
